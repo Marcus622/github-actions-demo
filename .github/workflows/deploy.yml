@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v5
+        with:
+            clean: 'true'
 
       - name: List files in workspace
         run: ls -R
