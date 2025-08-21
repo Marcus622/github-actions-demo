@@ -40,7 +40,7 @@ jobs:
 
              - name: install docker
                run: |
-                ssh -i ~/.ssh/meinPrivateKey ubuntu@${{secrets.EC2_IP}} "sudo apt update"
+                ssh -i ~/.ssh/meinPrivateKey ubuntu@${{secrets.EC2_IP}} "sudo apt update -y"
                 ssh -i ~/.ssh/meinPrivateKey ubuntu@${{secrets.EC2_IP}} "sudo apt install docker.io -y"
                 ssh -i ~/.ssh/meinPrivateKey ubuntu@${{secrets.EC2_IP}} "sudo usermod -aG docker ubuntu"
              
@@ -48,4 +48,5 @@ jobs:
                run: ssh -i ~/.ssh/meinPrivateKey ubuntu@${{secrets.EC2_IP}} "
                 docker stop nginx || true &&
                 docker rm nginx || true &&
-                docker run -d --name nginx -p 8080:80 nginx"
+                docker run -d --name nginx -p 8080:80 nginx
+                "
