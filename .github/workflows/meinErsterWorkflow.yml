@@ -3,17 +3,18 @@ name: meinErsterWorkflow
 on: push
 
 jobs:
-    meinErsterJob:
-        runs-on: ubuntu-latest
-        steps:
-            - name: meinErsterSchritt
-              run: echo "Hello World"
+    # meinErsterJob:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: meinErsterSchritt
+    #           run: echo "Hello World"
     
-    meinZweiterJob:
-        runs-on: ubuntu-latest
-        steps:
-            - name: derErsteSchrittVonJobZwei
+    # meinZweiterJob:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: derErsteSchrittVonJobZwei
             
-              run: echo "Ich komme aus dem zweiten Job"
-            - name: derZweiteSchrittVonJobZwei
-              run: echo "Ich bin der zweite Schritt im zweiten Job"
+    #           run: echo "Ich komme aus dem zweiten Job"
+    #         - name: derZweiteSchrittVonJobZwei
+    #           run: echo "Ich bin der zweite Schritt im zweiten Job"
+    
