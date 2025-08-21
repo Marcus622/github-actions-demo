@@ -52,12 +52,13 @@ jobs:
           ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo apt install docker.io -y"
           ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo usermod -aG docker ubuntu"
 
-      - name: Start Nginx Container on EC2
+      - name: Build and Run Custom Frontend Container
         run: |
           ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "
-          docker stop nginx || true &&
-          docker rm nginx || true &&
-          docker run -d --name nginx -p 8080:80 nginx"
+          docker build -t mein-frontend /home/ubuntu/
+          docker stop mein-frontend-container || true
+          docker rm mein-frontend-container || true &&
+          docker run -d --name mein-frontend-container -p 8080:80 nginx"
 
   cowsay-job:
     runs-on: ubuntu-latest
