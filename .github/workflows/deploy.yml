@@ -24,10 +24,13 @@ jobs:
           ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo apt update -y"
           ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo apt install nginx -y"
 
-      - name: Copy Files and Configure Nginx
+      - name: Copy Files for Docker Build
         run: |
-          scp -i ~/.ssh/meinPrivateKey frontend/index.html ubuntu@${{ secrets.EC2_IP }}:/home/ubuntu/index.html
-          ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo cp /home/ubuntu/index.html /var/www/html/index.html"
+          # Kopiere das Dockerfile in das /home/ubuntu/ Verzeichnis
+          scp -i ~/.ssh/meinPrivateKey Dockerfile ubuntu@${{ secrets.EC2_IP }}:/home/ubuntu/Dockerfile
+
+          # Kopiere den gesamten frontend-Ordner rekursiv (-r) in das /home/ubuntu/ Verzeichnis
+          scp -r -i ~/.ssh/meinPrivateKey frontend ubuntu@${{ secrets.EC2_IP }}:/home/ubuntu/frontend
           
       - name: Create and Copy Info File
         run: |
