@@ -66,7 +66,7 @@ jobs:
           docker build -t mein-frontend /home/ubuntu/
           docker stop mein-frontend-container || true
           docker rm mein-frontend-container || true &&
-          docker run -d --name mein-frontend-container -p 8080:80 nginx"
+          docker run -d --name mein-frontend-container -p 8080:80 mein-frontend"
 
   cowsay-job:
     runs-on: ubuntu-latest
