@@ -63,7 +63,7 @@ jobs:
       - name: Build and Run Custom Frontend Container
         run: |
           ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "
-          docker build -t mein-frontend /home/ubuntu/
+          docker build --no cache -t mein-frontend /home/ubuntu/
           docker stop mein-frontend-container || true
           docker rm mein-frontend-container || true &&
           docker run -d --name mein-frontend-container -p 8080:80 mein-frontend"
