@@ -1,5 +1,6 @@
 FROM nginx:alpine
 
-COPY ./frontend/ /usr/share/nginx/html/
+COPY ./frontend/index.html /usr/share/nginx/html/
+COPY ./frontend/robotmin.png /usr/share/nginx/html/
 
 EXPOSE 80
