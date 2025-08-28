@@ -23,7 +23,9 @@ jobs:
             
             - name: install nginx
               run: |
-                ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo apt update && sudo apt install nginx -y"
+                for ip in ${{ secrets.EC2_IP }}; do
+                ssh -i ~/.ssh/meinPrivateKey ubuntu@$ip "sudo apt update && sudo apt install nginx -y"
+                done
 
             - name: index.html für nginx bereitstellen
               run: |
