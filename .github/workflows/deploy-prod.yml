@@ -1,9 +1,8 @@
 name: Deployment auf den Produktions-EC2 Maschinen des LBs
 
-on: 
-  push:
-    tags:
-      - 'v*'
+on: workflow_dispatch
+
+    
 
 jobs:
     deploy:
