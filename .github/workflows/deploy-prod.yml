@@ -1,6 +1,6 @@
 name: Deployment auf den Produktions-EC2 Maschinen des LBs
 
-on: workflow_dispatch
+on: push
 
     
 
