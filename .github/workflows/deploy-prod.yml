@@ -23,7 +23,7 @@ jobs:
             
             - name: install nginx
               run: |
-                ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo apt update && sudo apt install -y nginx && sudo systemctl start nginx && sudo systemctl enable nginx"
+                ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo apt update && sudo apt install nginx -y"
 
             - name: index.html für nginx bereitstellen
               run: |
