@@ -16,9 +16,9 @@ jobs:
             - name: ssh setup
               run: | 
                 mkdir -p ~/.ssh
-                echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/meinPrivateKey
+                echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/meinPrivateKey
                 chmod 400 ~/.ssh/meinPrivateKey
-                for ip in ${{secrets.EC2_IPS}}; do
+                for ip in ${{ secrets.EC2_IP }}; do
                 ssh-keyscan -H $ip  >> ~/.ssh/known_hosts    
                 done
             
@@ -28,7 +28,7 @@ jobs:
 
             - name: index.html für nginx bereitstellen
               run: |
-                for ip in ${{secrets.EC2_IPS}}; do
+                for ip in ${{ secrets.EC2_IP }}; do
                 scp -i ~/.ssh/meinPrivateKey frontend/index.html ubuntu@$ip:/home/ubuntu/index.html
                 ssh -i ~/.ssh/meinPrivateKey ubuntu@$ip "sudo cp /home/ubuntu/index.html /var/www/html/index.html"    
                 done
