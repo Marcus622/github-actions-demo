@@ -21,6 +21,10 @@ jobs:
                 for ip in ${{secrets.EC2_IPS}}; do
                 ssh-keyscan -H $ip  >> ~/.ssh/known_hosts    
                 done
+            
+            - name: install nginx
+              run: |
+                ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_IP }} "sudo apt update && sudo apt install -y nginx && sudo systemctl start nginx && sudo systemctl enable nginx"
 
             - name: index.html für nginx bereitstellen
               run: |
