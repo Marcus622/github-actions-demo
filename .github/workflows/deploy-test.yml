@@ -15,7 +15,11 @@ jobs:
                 mkdir -p ~/.ssh
                 echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/meinPrivateKey
                 chmod 400 ~/.ssh/meinPrivateKey
-                ssh-keyscan -H ${{ secrets.EC2_TESTING_IP }}  >> ~/.ssh/known_hosts    
+                ssh-keyscan -H ${{ secrets.EC2_TESTING_IP }}  >> ~/.ssh/known_hosts
+            
+            - name: install nginx
+              run: |
+                ssh -i ~/.ssh/meinPrivateKey ubuntu@${{ secrets.EC2_TESTING_IP }} "sudo apt update && sudo apt install -y nginx && sudo systemctl start nginx && sudo systemctl enable nginx"
 
             - name: index.html für nginx bereitstellen
               run: |
