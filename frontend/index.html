@@ -3,114 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine einfache Webseite</title>
-    
+    <title>TechVision Solutions - Ihre Zukunft in Technik</title>
     <style>
-        /* Grundlegende Stile für die gesamte Seite */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            text-align: center;
         }
-
-        /* Container, um den Inhalt zu zentrieren und zu begrenzen */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            flex-grow: 1; /* Sorgt dafür, dass der Container den verfügbaren Platz einnimmt */
-        }
-
-        /* Kopfzeile */
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        /* Hauptinhalt */
-        main {
-            padding: 2rem 0;
-        }
-
-        main h2 {
-            color: #333;
-        }
-
-        /* Interaktiver Button */
-        .action-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .action-button:hover {
             background-color: #0056b3;
+            color: white;
+            padding: 20px 0;
+            border-bottom: 5px solid #004085;
         }
-
-        /* Fußzeile */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .button-group a {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button-group a:hover {
+            background-color: #218838;
+        }
         footer {
-            text-align: center;
-            padding: 1rem 0;
+            margin-top: 40px;
+            padding: 20px;
             background-color: #333;
-            color: #fff;
-            margin-top: auto; /* Drückt die Fußzeile nach unten */
+            color: white;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Willkommen auf meiner Webseite! 👋</h1>
+        <h1>TechVision Solutions</h1>
+        <p>Ihre Zukunft. Unsere Technologie.</p>
     </header>
 
     <div class="container">
-        <main>
-            <h2>Neu auf Test</h2>
-            <p>
-                Dies ist eine sehr einfache Webseite, die nur aus einer einzigen HTML-Datei besteht. Sie enthält alles, was zum Anzeigen nötig ist: die Struktur (HTML), das Aussehen (CSS) und eine kleine Interaktion (JavaScript).
-            </p>
-            <p>
-                Änderung auf Test!
-            </p>
-            
-            <button class="action-button" id="helloButton">Klick mich!</button>
-        </main>
+        <h2>Willkommen bei TechVision Solutions!</h2>
+        <p>
+            Wir sind Ihr Partner für innovative Technologielösungen, die Ihr Geschäft voranbringen. 
+            Von fortschrittlicher Softwareentwicklung bis hin zu maßgeschneiderten IT-Infrastrukturen – 
+            wir bieten Expertise, die verbindet.
+        </p>
+        
+        <p>
+            Entdecken Sie, wie wir gemeinsam Ihre Visionen in die Realität umsetzen können.
+        </p>
+
+        <div class="button-group">
+            <a href="#services">Unsere Services</a>
+            <a href="#contact">Kontaktieren Sie uns</a>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Dein Name</p>
+        <p>&copy; 2023 TechVision Solutions. Alle Rechte vorbehalten.</p>
     </footer>
-
-    <script>
-        // Finde den Button anhand seiner ID
-        const button = document.getElementById('helloButton');
-
-        // Füge einen Event-Listener hinzu, der auf einen Klick wartet
-        button.addEventListener('click', function() {
-            // Zeige eine einfache Benachrichtigung an, wenn der Button geklickt wird
-            alert('Hallo! Du hast auf den Button geklickt.');
-        });
-    </script>
 
 </body>
 </html>
