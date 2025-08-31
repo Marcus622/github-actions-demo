@@ -1,6 +1,9 @@
 name: Deployment auf den Produktions-EC2 Maschinen des LBs
 
-on: push
+on:
+  push:
+    tags:
+      - 'v*'
 
     
 
