@@ -6,59 +6,76 @@
     <title>TechVision Solutions - Ihre Zukunft in Technik</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modernerer Font */
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f2f5; /* Hellerer, modernerer Hintergrund */
             color: #333;
             text-align: center;
         }
         header {
-            background-color: #0056b3;
+            background-color: #1a73e8; /* Lebhafteres Blau */
             color: white;
-            padding: 20px 0;
-            border-bottom: 5px solid #004085;
+            padding: 30px 0; /* Mehr Padding */
+            border-bottom: 6px solid #155bb5; /* Dunklerer Akzent */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+        }
+        header h1 {
+            font-size: 3em; /* Größerer Titel */
+            margin-bottom: 5px;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 0;
         }
         .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 960px; /* Breiterer Container */
+            margin: 30px auto; /* Mehr Abstand */
+            padding: 30px;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px; /* Rundere Ecken */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Deutlicherer Schatten */
         }
-        img {
-            max-width: 100%;
+        .hero-image {
+            width: 100%; /* Bild nimmt die volle Breite des Containers ein */
             height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            border-radius: 10px; /* Leichte Rundung für das Bild */
+            margin-bottom: 30px; /* Abstand zum Text */
+            object-fit: cover; /* Stellt sicher, dass das Bild gut aussieht */
         }
-        h1, h2 {
-            color: #0056b3;
+        h2 {
+            color: #1a73e8;
+            font-size: 2.2em;
+            margin-bottom: 20px;
         }
         p {
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.8; /* Bessere Lesbarkeit */
+            margin-bottom: 25px;
+            font-size: 1.1em;
         }
         .button-group a {
             display: inline-block;
-            background-color: #28a745;
+            background-color: #34a853; /* Grüner, einladender Button */
             color: white;
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 12px 25px; /* Mehr Padding für Buttons */
+            margin: 0 15px;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 8px; /* Rundere Buttons */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Sanfterer Hover-Effekt */
+            font-weight: bold;
+            letter-spacing: 0.5px;
         }
         .button-group a:hover {
-            background-color: #218838;
+            background-color: #2e8b46;
+            transform: translateY(-2px); /* Leichter "Pop-up"-Effekt */
         }
         footer {
-            margin-top: 40px;
-            padding: 20px;
+            margin-top: 50px;
+            padding: 25px;
             background-color: #333;
             color: white;
-            font-size: 0.9em;
+            font-size: 0.95em;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -77,7 +94,11 @@
             wir bieten Expertise, die verbindet.
         </p>
         
+        <img src="https://images.unsplash.com/photo-1511979040375-3bf95d03a113?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abstrakte Technologie-Illustration" class="hero-image">
+        
         <p>
+            Mit einem Fokus auf Künstliche Intelligenz, Cloud Computing und Datenanalyse helfen wir Unternehmen, 
+            ihr volles Potenzial auszuschöpfen und in einer sich schnell entwickelnden digitalen Welt erfolgreich zu sein. 
             Entdecken Sie, wie wir gemeinsam Ihre Visionen in die Realität umsetzen können.
         </p>
 
@@ -89,8 +110,8 @@
 
     <footer>
         <p>&copy; 2023 TechVision Solutions. Alle Rechte vorbehalten.</p>
-        <p>Folgen Sie uns auf fuckbook</p>
+        <p>Standort: Wimbach, Rheinland Pfalz, Deutschland</p>
     </footer>
 
 </body>
-</html> 
+</html>
